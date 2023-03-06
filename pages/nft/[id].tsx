@@ -29,25 +29,33 @@ function NFTDropPage() {
         </div>
 
             {/* Right View */}
-        <div className="col-span-6 py-12">
+        <div className="col-span-6 py-8">
             {/* Header */}
             <header className='flex items-center justify-between mx-6'>
                 <h1 className='w-52 cursor-pointer text-xl font-extralight sm:w-80'>
                     The <span className='font-extrabold underline decoration-pink-600/50'> ISHHHH</span> NFT MARKET PLACE
                 </h1>
 
-                <button className='rounded-full bg-rose-400 text-white
+                <button onClick={() => address ? disconnect() : connectWithMetamask()} className='rounded-full bg-rose-400 text-white
                 text-xs px-4 py-2 font-bold lg:px-5 lg:py-3 lg:text-base'>
-                    Sign In
+                    {address ? 'Sign Out': 'Sign In' }
                 </button>
+
             </header>
-    
             <hr className='my-2 border'/>
 
+
+          
+            {address && (
+                <p className='text-center text-rose-400'>You're logged in with wallet {address.substring(0, 5)}...{address.substring(address.length-5)}</p>
+            )}
+            
+
+
             {/* Content */}
-            <div className='h-4/5 mt-10 flex flex-1 flex-col items-center space-y-6 text-center lg:justify-center lg:space-y-0 px-5 pb-6'>
+            <div className='h-3/5 mt-10 flex flex-1 flex-col items-center space-y-6 text-center lg:justify-center lg:space-y-0 px-5 pb-10'>
                 <img src='https://links.papareact.com/bdy' alt=''
-                    className='w-80 object-cover pb-10 lg:h-40'
+                    className='w-80 object-contain pb-8 lg:h-40'
                 />
                 <h1 className='text-3xl font-bold lg:text-5xl lg:font-extrabold'>The Ishhh Ape Coding Club | NFT Drop</h1>
                 <p className='text-l text-green-600 font-bold lg:py-5'>13/21 NFT's claimed</p>
@@ -57,8 +65,8 @@ function NFTDropPage() {
 
 
             {/* Button */}
-            <div className='flex justify-center items-center px-20'>
-                <button onClick={() => connectWithMetamask()} className='h-16 bg-red-600 w-full text-white rounded-full font-bold'>Mint NFT(0.01 ETH)</button>
+            <div className='flex justify-center items-center px-20 mt-20 bg:mt-10'>
+                <button className='h-16 bg-red-600 w-full text-white rounded-full font-bold'>Mint NFT(0.01 ETH)</button>
             </div>
 
 

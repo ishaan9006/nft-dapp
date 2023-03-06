@@ -19,9 +19,9 @@ function NFTDropPage() {
        </div>
 
         {/* Right View */}
-       <div className="col-span-6">
+       <div className="col-span-6 py-12">
         {/* Header */}
-        <header className='flex items-center justify-between p-4'>
+        <header className='flex items-center justify-between mx-6'>
             <h1 className='w-52 cursor-pointer text-xl font-extralight sm:w-80'>
                 The <span className='font-extrabold underline decoration-pink-600/50'> ISHHHH</span> NFT MARKET PLACE
             </h1>
@@ -32,9 +32,24 @@ function NFTDropPage() {
             </button>
         </header>
 
-        {/* Content */}
+        <hr className='my-2 border'/>
 
-        {/* Button */}
+        {/* Content */}
+        <div className='h-4/5 mt-10 flex flex-1 flex-col items-center space-y-6 text-center lg:justify-center lg:space-y-0 px-5 pb-6'>
+            <img src='https://links.papareact.com/bdy' alt=''
+                className='w-80 object-cover pb-10 lg:h-40'
+            />
+            <h1 className='text-3xl font-bold lg:text-5xl lg:font-extrabold'>The Ishhh Ape Coding Club | NFT Drop</h1>
+            <p className='text-l text-green-600 font-bold lg:py-5'>13/21 NFT's claimed</p>
+        </div>
+
+
+
+
+        
+
+
+
        </div>
        
     </div>

@@ -46,7 +46,10 @@ function NFTDropPage() {
 
 
 
-        
+        {/* Button */}
+        <div className='flex justify-center items-center px-20'>
+            <button className='h-16 bg-red-600 w-full text-white rounded-full font-bold'>Mint NFT(0.01 ETH)</button>
+        </div>
 
 
 
